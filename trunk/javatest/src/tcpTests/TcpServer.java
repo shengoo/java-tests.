@@ -1,7 +1,9 @@
 package tcpTests;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,22 +22,28 @@ public class TcpServer {
 	 */
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		ServerSocket listen = new ServerSocket(5050);  
+		ServerSocket serverSocket = new ServerSocket(5050);  
         
-        Socket server  = listen.accept();  
+        Socket socket  = serverSocket.accept();  
   
-        InputStream in = server.getInputStream();  
-        OutputStream out = server.getOutputStream();  
+        InputStream in = socket.getInputStream();  
+        OutputStream out = socket.getOutputStream();  
   
-        int radius = in.read(); 
-        System.out.println("收到:" + radius);  
+        //int radius = in.read(); 
+        //System.out.println("收到:" + radius);  
+        
+        BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(in));  
+        System.out.println(bufferedReader.readLine());
   
-        out.write(caculate(radius));
+        //byte[] result = caculate(radius);
+        //out.write(result);
+        //System.out.println("发送:" + new String(result));
           
+        bufferedReader.close();
         out.close();  
         in.close();  
-        server.close();  
-        listen.close();
+        socket.close();  
+        serverSocket.close();
 	}
 	
 	static byte[] caculate(int ra){
