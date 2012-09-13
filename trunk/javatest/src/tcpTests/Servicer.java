@@ -29,13 +29,13 @@ public class Servicer implements Runnable {
 	        DataOutputStream dataOutputStream=new DataOutputStream(outputStream);  
 	        while (true) {  
 	            String strWord=bufferedReader.readLine();  
-//	          System.out.println(strWord+":"+strWord.length());  
+	            System.out.println(strWord+":"+strWord.length());  
 	            if ("quit".equalsIgnoreCase(strWord)) {  
 	                break;  
 	            }  
 	            String strEcho=(new StringBuilder(strWord).reverse()).toString();  
 	            //dataOutputStream.writeBytes(strWord+"---->"+strEcho+"\r\n");  
-	            //System.getProperty("line.separator")Ϊ��ƽ̨���з���WindowΪ\r\n,unixΪ\n  
+	            //System.getProperty("line.separator")Îª¿çÆ½Ì¨»»ÐÐ·û¡£WindowÎª\r\n,unixÎª\n  
 	            dataOutputStream.writeBytes(strWord+"---->"+strEcho+System.getProperty("line.separator"));  
 	        }  
 	        bufferedReader.close();  
