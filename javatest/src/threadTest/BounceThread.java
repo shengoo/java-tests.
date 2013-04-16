@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 public class BounceThread {
 
-	/**
+	/**球
 	 * @param args
 	 */
 	public static void main(String[] args) {
