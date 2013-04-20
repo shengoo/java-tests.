@@ -1,7 +1,7 @@
 package algorithmTest;
 
 public class Caculate24 {
-	// ²Ù×÷·û´úÂë £º½öÏŞËÄÔòÔËËã
+	// æ“ä½œç¬¦ä»£ç  ï¼šä»…é™å››åˆ™è¿ç®—
 	private int operator1, operator2, operator3;
 
 	public int getOperator1() {
@@ -28,11 +28,11 @@ public class Caculate24 {
 		this.operator3 = operator3;
 	}
 
-	// ÊäÈëµÄ4¸öÊı×Ö£º
+	// è¾“å…¥çš„4ä¸ªæ•°å­—ï¼š
 	private float[] inputedNumbers = new float[4];
-	// Ëã·¨ĞèÒª°ÑÊäÈëµÄ4¸öÊı×Ö°´Ò»¶¨¹æÔòÅÅĞò£º
+	// ç®—æ³•éœ€è¦æŠŠè¾“å…¥çš„4ä¸ªæ•°å­—æŒ‰ä¸€å®šè§„åˆ™æ’åºï¼š
 	private float[] sortedNumbers = new float[4];
-	// ÅÅĞòËã·¨ËùĞèÒªµÄÏÂ±êÊı×é£º
+	// æ’åºç®—æ³•æ‰€éœ€è¦çš„ä¸‹æ ‡æ•°ç»„ï¼š
 	private int[][] indexs = { { 0, 1, 2, 3 }, { 0, 1, 3, 2 }, { 0, 2, 1, 3 },
 			{ 0, 2, 3, 1 }, { 0, 3, 1, 2 }, { 0, 3, 2, 1 }, { 1, 0, 2, 3 },
 			{ 1, 0, 3, 2 }, { 1, 2, 0, 3 }, { 1, 2, 3, 0 }, { 1, 3, 0, 2 },
@@ -40,7 +40,7 @@ public class Caculate24 {
 			{ 2, 1, 3, 0 }, { 2, 3, 0, 1 }, { 2, 3, 1, 0 }, { 3, 0, 1, 2 },
 			{ 3, 0, 2, 1 }, { 3, 1, 0, 2 }, { 3, 1, 2, 0 }, { 3, 2, 0, 1 },
 			{ 3, 2, 1, 0 } };
-	// ±íÊ¾ÊÇµÚ¼¸»ØºÏ£¨Ò»¹²Òª¾­¹ı24»ØºÏ£©
+	// è¡¨ç¤ºæ˜¯ç¬¬å‡ å›åˆï¼ˆä¸€å…±è¦ç»è¿‡24å›åˆï¼‰
 	private int round = 0;
 
 	public int getRound() {
@@ -51,14 +51,14 @@ public class Caculate24 {
 		this.round = round;
 	}
 
-	// ±¾Ëã·¨ÖĞ×îÖØÒªµÄÊı¾İ½á¹¹£¬Ä£Äâ¶ş²æÊ÷£¬result[0]ÊÇ¸ù½áµã£¬Èç¹ûµÃµ½result[0]µÄÖµÎª24£¬¾ÍËã³öÀ´ÁË
+	// æœ¬ç®—æ³•ä¸­æœ€é‡è¦çš„æ•°æ®ç»“æ„ï¼Œæ¨¡æ‹ŸäºŒå‰æ ‘ï¼Œresult[0]æ˜¯æ ¹ç»“ç‚¹ï¼Œå¦‚æœå¾—åˆ°result[0]çš„å€¼ä¸º24ï¼Œå°±ç®—å‡ºæ¥äº†
 	private float result[] = new float[9];
 
 	private void print(String s) {
 		System.out.println(s);
 	}
 
-	// ÌáÈ¡ÊäÈëµÄ4¸öÊı×Ö£¬´æÈëÊı×éinputedNumbers
+	// æå–è¾“å…¥çš„4ä¸ªæ•°å­—ï¼Œå­˜å…¥æ•°ç»„inputedNumbers
 	private boolean setNumbers(String[] str) {
 		if (str.length != 4) {
 			print("Please input 4 Integers!");
@@ -76,12 +76,12 @@ public class Caculate24 {
 		return true;
 	}
 
-	// ¸ø¶ş²æÊ÷ÖĞÖ¸¶¨½áµã¸³Öµ£º
+	// ç»™äºŒå‰æ ‘ä¸­æŒ‡å®šç»“ç‚¹èµ‹å€¼ï¼š
 	private void setResult(int index, float value) {
 		result[index] = value;
 	}
 
-	// µÃµ½¶ş²æÊ÷ÖĞÖ¸¶¨½áµãµÄÖµ£º
+	// å¾—åˆ°äºŒå‰æ ‘ä¸­æŒ‡å®šç»“ç‚¹çš„å€¼ï¼š
 	private float getResult(int index) {
 		return result[index];
 	}
@@ -92,14 +92,14 @@ public class Caculate24 {
 		}
 	}
 
-	// Éú³ÉËãÊ½£º
+	// ç”Ÿæˆç®—å¼ï¼š
 	private String getNumSentence(int intOptr, float opnd1, float opnd2,
 			float rst) {
 		String ret = "";
 		switch (intOptr) {
 		case 0:
 			ret = opnd1 + "+" + opnd2 + "=" + rst;
-			// Ô­ÏÈ´æÔÚÒ»¸öÒş²ØµÄbug£º°ÑrstĞ´³ÉÁËresult£¬ÓëÀàCalculatorµÄÓòresult³åÍ»¡£
+			// åŸå…ˆå­˜åœ¨ä¸€ä¸ªéšè—çš„bugï¼šæŠŠrstå†™æˆäº†resultï¼Œä¸ç±»Calculatorçš„åŸŸresultå†²çªã€‚
 			break;
 		case 1:
 			ret = opnd1 + "-" + opnd2 + "=" + rst;
@@ -121,8 +121,8 @@ public class Caculate24 {
 		return ret;
 	}
 
-	// ´òÓ¡¼ÆËã³öµÄ½á¹û£º
-	// ÒòÎªÓĞÁ½ÖÖ½á¹¹µÄ¶ş²æÊ÷£¬¹ÊĞèÒªÁ½¸ö·½·¨·Ö±ğ¶ÔÓ¦ÓÚËüÃÇ
+	// æ‰“å°è®¡ç®—å‡ºçš„ç»“æœï¼š
+	// å› ä¸ºæœ‰ä¸¤ç§ç»“æ„çš„äºŒå‰æ ‘ï¼Œæ•…éœ€è¦ä¸¤ä¸ªæ–¹æ³•åˆ†åˆ«å¯¹åº”äºå®ƒä»¬
 	private void printResult() {
 		/** TODO */
 		int optr1, optr2, optr3;
@@ -160,7 +160,7 @@ public class Caculate24 {
 
 	}
 
-	// ÅÅĞò·½·¨£º
+	// æ’åºæ–¹æ³•ï¼š
 	private void sortNumbers(int rnd) {
 		if (rnd < 0 || rnd > 23) {
 			print("Error!");
@@ -172,7 +172,7 @@ public class Caculate24 {
 		sortedNumbers[3] = inputedNumbers[indexs[rnd][3]];
 	}
 
-	// ¸ù¾İÔËËã·û´úÂë¡¢2¸ö²Ù×÷Êı£¬µÃµ½ÖĞ¼ä½á¹û£º
+	// æ ¹æ®è¿ç®—ç¬¦ä»£ç ã€2ä¸ªæ“ä½œæ•°ï¼Œå¾—åˆ°ä¸­é—´ç»“æœï¼š
 	private float getMidValue(int i, float m, float n) {
 		float ret = 0f;
 		switch (i) {
@@ -212,7 +212,7 @@ public class Caculate24 {
 		return ret;
 	}
 
-	// ÒòÎªÓĞÁ½ÖÖ½á¹¹µÄ¶ş²æÊ÷£¬¼ÆËã24µÄËã·¨Ò²ÓĞÁ½ÖÖ£º
+	// å› ä¸ºæœ‰ä¸¤ç§ç»“æ„çš„äºŒå‰æ ‘ï¼Œè®¡ç®—24çš„ç®—æ³•ä¹Ÿæœ‰ä¸¤ç§ï¼š
 	private void calculate() {
 		clearResult();
 		setResult(3, sortedNumbers[0]);
@@ -240,7 +240,7 @@ public class Caculate24 {
 		}
 	}
 
-	// µÚ2ÖÖºó±¸Ëã·¨£º
+	// ç¬¬2ç§åå¤‡ç®—æ³•ï¼š
 	private void calculate_1() {
 		clearResult();
 		setResult(7, sortedNumbers[0]);

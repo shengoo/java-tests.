@@ -3,6 +3,7 @@ package algorithmTest;
 public class YanghuiTest {
 
 	/**
+	 * 杨辉三角
 	 * @param args
 	 */
 	public static void main(String[] args) {
