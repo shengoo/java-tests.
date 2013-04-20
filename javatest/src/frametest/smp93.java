@@ -16,21 +16,21 @@ class smp931 extends Frame implements ActionListener {
 		Panel pnl = new Panel();
 		pnl.setBackground(Color.blue);
 		add(pnl);
-		b1 = new Button("´ò¿ª");
-		b2 = new Button("±£´æ");
+		b1 = new Button("æ‰“å¼€");
+		b2 = new Button("ä¿å­˜");
 		add(b1);
 		add(b2);
 		pnl.setBounds(20, 40, 250, 150);
 		b1.setBounds(50, 200, 80, 30);
 		b2.setBounds(150, 200, 80, 30);
-		o = new FileDialog(this, "´ò¿ª", FileDialog.LOAD);
-		s = new FileDialog(this, "±£´æ", FileDialog.SAVE);
+		o = new FileDialog(this, "æ‰“å¼€", FileDialog.LOAD);
+		s = new FileDialog(this, "ä¿å­˜", FileDialog.SAVE);
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		this.addWindowListener(
 		/**
-		 * WindowListenerÊÇ½Ó¿Ú£¬Ã»ÓĞÊµÏÖ¡£
-		 * WindowAdapterÊÇ³éÏóÀà£¬ÊµÏÖÁËËùÓĞµÄWindowListener·½·¨£¬Ö»²»¹ı·½·¨ÄÚ²¿¶¼ÊÇ¿ÕµÄ¡£
+		 * WindowListeneræ˜¯æ¥å£ï¼Œæ²¡æœ‰å®ç°ã€‚
+		 * WindowAdapteræ˜¯æŠ½è±¡ç±»ï¼Œå®ç°äº†æ‰€æœ‰çš„WindowListeneræ–¹æ³•ï¼Œåªä¸è¿‡æ–¹æ³•å†…éƒ¨éƒ½æ˜¯ç©ºçš„ã€‚
 		 */
 		new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {

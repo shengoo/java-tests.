@@ -17,29 +17,29 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 	JMenuBar jmb = new JMenuBar();
 	JColorChooser jcc = new JColorChooser();
 
-	JMenu jm1 = new JMenu("ÎÄ¼ş(F)");
-	JMenu jm2 = new JMenu("±à¼­(E)");
-	JMenu jm3 = new JMenu("¸ñÊ½(O)");
-	JMenu jm4 = new JMenu("²é¿´(V)");
-	JMenu jm5 = new JMenu("°ïÖú(H)");
+	JMenu jm1 = new JMenu("æ–‡ä»¶(F)");
+	JMenu jm2 = new JMenu("ç¼–è¾‘(E)");
+	JMenu jm3 = new JMenu("æ ¼å¼(O)");
+	JMenu jm4 = new JMenu("æŸ¥çœ‹(V)");
+	JMenu jm5 = new JMenu("å¸®åŠ©(H)");
 
-	JMenuItem jmi1 = new JMenuItem("ĞÂ½¨(N)");
-	JMenuItem jmi2 = new JMenuItem("´ò¿ª(O)");
-	JMenuItem jmi3 = new JMenuItem("±£´æ(S)");
-	JMenuItem jmi4 = new JMenuItem("ÍË³ö(X)");
+	JMenuItem jmi1 = new JMenuItem("æ–°å»º(N)");
+	JMenuItem jmi2 = new JMenuItem("æ‰“å¼€(O)");
+	JMenuItem jmi3 = new JMenuItem("ä¿å­˜(S)");
+	JMenuItem jmi4 = new JMenuItem("é€€å‡º(X)");
 
-	JMenuItem jmi5 = new JMenuItem("³·Ïû(U)");
-	JMenuItem jmi6 = new JMenuItem("¸´ÖÆ(C)");
-	JMenuItem jmi7 = new JMenuItem("Õ³Ìù(P)");
-	JMenuItem jmi8 = new JMenuItem("¼ôÇĞ(T)");
-	JMenuItem jmi12 = new JMenuItem("ÈÕÆÚºÍÊ±¼ä");
+	JMenuItem jmi5 = new JMenuItem("æ’¤æ¶ˆ(U)");
+	JMenuItem jmi6 = new JMenuItem("å¤åˆ¶(C)");
+	JMenuItem jmi7 = new JMenuItem("ç²˜è´´(P)");
+	JMenuItem jmi8 = new JMenuItem("å‰ªåˆ‡(T)");
+	JMenuItem jmi12 = new JMenuItem("æ—¥æœŸå’Œæ—¶é—´");
 
-	JMenuItem jmi9 = new JMenuItem("×ÖÌå(E)");
-	JCheckBoxMenuItem jcbmi = new JCheckBoxMenuItem("×Ô¶¯»»ĞĞ(W)");
+	JMenuItem jmi9 = new JMenuItem("å­—ä½“(E)");
+	JCheckBoxMenuItem jcbmi = new JCheckBoxMenuItem("è‡ªåŠ¨æ¢è¡Œ(W)");
 
-	JMenuItem jmi10 = new JMenuItem("É¾³ı(S)");
+	JMenuItem jmi10 = new JMenuItem("åˆ é™¤(S)");
 
-	JMenuItem jmi11 = new JMenuItem("±³¾°ÑÕÉ«(H)");
+	JMenuItem jmi11 = new JMenuItem("èƒŒæ™¯é¢œè‰²(H)");
 
 	JTextArea jta = new JTextArea(15, 15);
 
@@ -51,7 +51,7 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 		this.addWindowListener(this);
 		c.setLayout(new BorderLayout());
 		c.add(jmb, BorderLayout.NORTH);
-		this.setTitle("ĞÂ½¨ ÎÄ±¾ÎÄµµ");
+		this.setTitle("æ–°å»º æ–‡æœ¬æ–‡æ¡£");
 		jmb.add(jm1);
 		jm1.setMnemonic('f');
 		jm1.addActionListener(this);
@@ -114,7 +114,7 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == jmi1) {
 			jta.setText("");
-			this.setTitle("ÎŞ±êÌâ - ¼ÇÊÂ±¾");
+			this.setTitle("æ— æ ‡é¢˜ - è®°äº‹æœ¬");
 		}
 		if (e.getSource() == jmi2) {
 			File f1;
@@ -161,7 +161,7 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 
 		}
 		if (e.getSource() == jmi4) {
-			int a = JOptionPane.showConfirmDialog(this, "ÎÄ¼şÒÑ±»¸Ä±ä£¬ÊÇ·ñÒª±£´æ£¿", "ÌáÊ¾",
+			int a = JOptionPane.showConfirmDialog(this, "æ–‡ä»¶å·²è¢«æ”¹å˜ï¼Œæ˜¯å¦è¦ä¿å­˜ï¼Ÿ", "æç¤º",
 					JOptionPane.YES_NO_CANCEL_OPTION);
 			if (a == 1) {
 				this.dispose();
@@ -195,7 +195,7 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 			int h = c1.get(Calendar.HOUR);
 			int m1 = c1.get(Calendar.MINUTE);
 			int m2 = m + 1;
-			jta.setText(y + "Äê" + m2 + "ÔÂ" + d + "ÈÕ" + h + ":" + m1);
+			jta.setText(y + "å¹´" + m2 + "æœˆ" + d + "æ—¥" + h + ":" + m1);
 		}
 		if (e.getSource() == jmi11) {
 			Color ccc = JColorChooser.showDialog(this, "color", Color.BLACK);
@@ -228,7 +228,7 @@ public class NoteBook extends JFrame implements ActionListener, ItemListener,
 
 	public void windowClosing(WindowEvent arg0) {
 
-		int a = JOptionPane.showConfirmDialog(this, "ÎÄ¼şÒÑ±»¸Ä±ä£¬ÊÇ·ñÒª±£´æ£¿", "ÌáÊ¾",
+		int a = JOptionPane.showConfirmDialog(this, "æ–‡ä»¶å·²è¢«æ”¹å˜ï¼Œæ˜¯å¦è¦ä¿å­˜ï¼Ÿ", "æç¤º",
 				JOptionPane.YES_NO_CANCEL_OPTION);
 		if (a == 1) {
 			this.dispose();
