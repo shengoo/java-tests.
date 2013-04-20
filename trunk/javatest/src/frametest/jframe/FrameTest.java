@@ -15,13 +15,13 @@ class Frame extends JFrame implements ActionListener {
 	JTextField jt1, jt2;
 
 	public Frame() {
-		super("´°¿Ú");
+		super("çª—å£");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().setLayout(new FlowLayout());
-		jl1 = new JLabel("ÇëÑ¡ÔñÌáÊ¾ÓïÑÔµÄÖÖÀà");
+		jl1 = new JLabel("è¯·é€‰æ‹©æç¤ºè¯­è¨€çš„ç§ç±»");
 
-		jb1 = new JButton("ÆÕÍ¨»°");
-		jb2 = new JButton("Ó¢Óï");
+		jb1 = new JButton("æ™®é€šè¯");
+		jb2 = new JButton("è‹±è¯­");
 		jb1.addActionListener(this);
 		jb2.addActionListener(this);
 
@@ -38,10 +38,10 @@ class Frame extends JFrame implements ActionListener {
 			JFrame f1 = new JFrame("");
 			f1.setSize(400, 300);
 			f1.getContentPane().setLayout(new FlowLayout());
-			jl2 = new JLabel("ÇëÑ¡Ôñ·şÎñÏîÄ¿");
+			jl2 = new JLabel("è¯·é€‰æ‹©æœåŠ¡é¡¹ç›®");
 
-			jb3 = new JButton("³åÖµ¿¨³åÖµ");
-			jb4 = new JButton("²éÑ¯Óà¶î");
+			jb3 = new JButton("å†²å€¼å¡å†²å€¼");
+			jb4 = new JButton("æŸ¥è¯¢ä½™é¢");
 			jb3.addActionListener(this);
 			jb4.addActionListener(this);
 
@@ -73,7 +73,7 @@ class Frame extends JFrame implements ActionListener {
 		if (e.getSource() == jb3) {
 			JFrame f3 = new JFrame("");
 			f3.getContentPane().setLayout(new FlowLayout());
-			jl4 = new JLabel("ÇëÊäÈëÄãÒª³åÖµµÄ½ğ¶î");
+			jl4 = new JLabel("è¯·è¾“å…¥ä½ è¦å†²å€¼çš„é‡‘é¢");
 
 			jt1 = new JTextField(10);
 			jt1.addActionListener(this);
@@ -87,8 +87,8 @@ class Frame extends JFrame implements ActionListener {
 		if (e.getSource() == jb4) {
 			JFrame f4 = new JFrame("");
 			f4.getContentPane().setLayout(new FlowLayout());
-			jl5 = new JLabel("ÄúµÄÓà¶îÊÇ£º");
-			jl6 = new JLabel("60Ôª 30·Ö");
+			jl5 = new JLabel("æ‚¨çš„ä½™é¢æ˜¯ï¼š");
+			jl6 = new JLabel("60å…ƒ 30åˆ†");
 			f4.getContentPane().add(jl5);
 			f4.getContentPane().add(jl6);
 

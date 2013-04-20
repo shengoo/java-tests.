@@ -1,20 +1,26 @@
 package frametest.listenertest;
 
 import java.awt.*;
-import java.awt.Color;
-import java.awt.Label;
-import java.awt.TextField;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class TextMultListener implements MouseMotionListener, MouseListener {
-	Frame f = new Frame("¶àÖØ¼àÌıÆ÷");
+	Frame f = new Frame("å¤šé‡ç›‘å¬å™¨");
+	
 	TextField tf = new TextField(30);
-	Button b = new Button("start");
+	Button b = new Button("æŒ‰é’®");
 
 	public TextMultListener() {
-		Label l = new Label("Çë°´ÏÂÊó±ê×ó¼üÒÆ¶¯");
+		f.addWindowListener(new WindowAdapter() {
+			 public void windowClosing(WindowEvent e){
+				  System.exit(0);
+				 }
+		});
+		String string = "è¯·æŒ‰ä¸‹é¼ æ ‡å·¦é”®ç§»åŠ¨";
+		Label l = new Label(string);
 		f.add(l, "North");
 		f.add(tf, "South");
 		f.setBackground(new Color(200, 200, 100));
@@ -31,7 +37,7 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		String s = "Êó±êÒÆ¶¯µ½µÄÎ»ÖÃÊÇ£º(" + e.getX() + "-" + e.getY() + ")";
+		String s = "é¼ æ ‡ç§»åŠ¨åˆ°çš„ä½ç½®æ˜¯ï¼š(" + e.getX() + "-" + e.getY() + ")";
 		tf.setText(s);
 	}
 
@@ -43,16 +49,16 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource().equals(f))
-			tf.setText("ÄãµãÁËFrame");
+			tf.setText("ä½ ç‚¹äº†Frame");
 		if (e.getSource().equals(b)) 
-			tf.setText("Äãµã»÷ÁËbutton");
+			tf.setText("ä½ ç‚¹å‡»äº†button");
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 
 		tf.setBackground(Color.green);
-		tf.setText("Êó±êÒÑ¾­½øÈë½çÃæ");
+		tf.setText("é¼ æ ‡å·²ç»è¿›å…¥ç•Œé¢");
 
 		// TODO Auto-generated method stub
 
@@ -61,7 +67,7 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		tf.setText("Êó±êÒÑ¾­³öÁË½çÃæ");
+		tf.setText("é¼ æ ‡å·²ç»å‡ºäº†ç•Œé¢");
 		tf.setBackground(Color.RED);
 //		System.out.print(tf.BOTTOM_ALIGNMENT);
 	}

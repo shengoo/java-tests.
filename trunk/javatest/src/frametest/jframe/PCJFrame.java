@@ -18,7 +18,7 @@ public class PCJFrame extends JFrame implements ActionListener {
 	private EllipseCanvas Ellipse;
 
 	public PCJFrame() {
-		super("绘制平面图形并计算周长和面积");
+		super("缁樺埗骞抽潰鍥惧舰骞惰绠楀懆闀垮拰闈㈢Н");
 		this.setSize(600, 300);
 		this.setLocation(200, 100);
 		this.setBackground(Color.white);
@@ -26,28 +26,28 @@ public class PCJFrame extends JFrame implements ActionListener {
 		JPanel panel1 = new JPanel(new FlowLayout(1));
 		this.getContentPane().add(panel1, "North");
 		ButtonGroup bgroup = new ButtonGroup();
-		radio_Rec = new JRadioButton("矩形", true);
+		radio_Rec = new JRadioButton("鐭╁舰", true);
 		panel1.add(radio_Rec);
 		bgroup.add(radio_Rec);
-		radio_Ell = new JRadioButton("椭圆", true);
+		radio_Ell = new JRadioButton("妞渾", true);
 		panel1.add(radio_Ell);
 		bgroup.add(radio_Ell);
-		panel1.add(new Label("长度"));
+		panel1.add(new Label("闀垮害"));
 		text_length = new JTextField(10);
 		panel1.add(text_length);
-		panel1.add(new Label("宽度"));
+		panel1.add(new Label("瀹藉害"));
 		text_width = new JTextField(10);
 		panel1.add(text_width);
-		button_paint = new JButton("绘图");
+		button_paint = new JButton("缁樺浘");
 		button_paint.addActionListener(this);
 		panel1.add(button_paint);
 		JPanel panel2 = new JPanel(new FlowLayout(1));
 		this.getContentPane().add(panel2, "South");
 		text_perimeter = new JTextField(20);
-		panel2.add(new Label("周长"));
+		panel2.add(new Label("鍛ㄩ暱"));
 		panel2.add(text_perimeter);
 		text_area = new JTextField(20);
-		panel2.add(new Label("面积"));
+		panel2.add(new Label("闈㈢Н"));
 		panel2.add(text_area);
 		this.setVisible(true);
 	}
