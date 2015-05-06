@@ -2,6 +2,7 @@ package game.tetris;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class Tetris extends JFrame implements KeyListener,Runnable {
@@ -15,6 +16,26 @@ public class Tetris extends JFrame implements KeyListener,Runnable {
 		setLocation(W/2-120,H/2-160);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+	}
+
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

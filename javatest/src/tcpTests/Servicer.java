@@ -18,7 +18,6 @@ public class Servicer implements Runnable {
         this.socket = socket;  
     }  
 
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		try {  

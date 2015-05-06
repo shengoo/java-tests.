@@ -41,12 +41,10 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 		tf.setText(s);
 	}
 
-	@Override
 	public void mouseMoved(MouseEvent e) {
 
 	}
 
-	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource().equals(f))
 			tf.setText("你点了Frame");
@@ -54,7 +52,6 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 			tf.setText("你点击了button");
 	}
 
-	@Override
 	public void mouseEntered(MouseEvent e) {
 
 		tf.setBackground(Color.green);
@@ -64,7 +61,6 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 
 	}
 
-	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		tf.setText("鼠标已经出了界面");
@@ -72,13 +68,11 @@ public class TextMultListener implements MouseMotionListener, MouseListener {
 //		System.out.print(tf.BOTTOM_ALIGNMENT);
 	}
 
-	@Override
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void mouseReleased(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 	}

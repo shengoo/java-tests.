@@ -44,7 +44,6 @@ class BallRunnable implements Runnable{
 		component=aComponent;
 	}
 
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
@@ -195,19 +194,16 @@ class BounceFrame extends JFrame{
 		
 		addKeyListener(new KeyListener() {
 			
-			@Override
 			public void keyTyped(KeyEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
 			
-			@Override
 			public void keyReleased(KeyEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
 			
-			@Override
 			public void keyPressed(KeyEvent arg0) {
 				// TODO Auto-generated method stub
 				
@@ -221,7 +217,6 @@ class BounceFrame extends JFrame{
 		addButton(buttonpPanel, "Add", 
 				new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				addBall();
@@ -229,7 +224,6 @@ class BounceFrame extends JFrame{
 		});
 		addButton(buttonpPanel, "Stop", new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				stopBalls();
@@ -237,7 +231,6 @@ class BounceFrame extends JFrame{
 		});
 		addButton(buttonpPanel, "Clear", new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				clearBalls();
@@ -246,7 +239,6 @@ class BounceFrame extends JFrame{
 		addButton(buttonpPanel, "Close",
 				new ActionListener() {
 					
-					@Override
 					public void actionPerformed(ActionEvent arg0) {
 						// TODO Auto-generated method stub
 						System.exit(0);
