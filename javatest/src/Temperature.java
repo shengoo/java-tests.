@@ -1,4 +1,4 @@
-public class Temperature {
+ï»¿public class Temperature {
 
 	private float degree;
 	private char msm;
@@ -19,7 +19,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ·µ»ØÓÃÉãÊÏ¼ÆÁ¿µÄÎÂ¶È
+	 * è¿”å›ç”¨æ‘„æ°è®¡é‡çš„æ¸©åº¦
 	 * 
 	 * @return
 	 */
@@ -32,7 +32,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ·µ»Ø»ªÊÏÎÂ¶È
+	 * è¿”å›åæ°æ¸©åº¦
 	 * 
 	 * @return
 	 */
@@ -45,7 +45,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ÉèÖÃÎÂ¶ÈÖµ
+	 * è®¾ç½®æ¸©åº¦å€¼
 	 * 
 	 * @param d
 	 */
@@ -54,7 +54,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ÉèÖÃ¼ÆÁ¿µ¥Î»
+	 * è®¾ç½®è®¡é‡å•ä½
 	 * 
 	 * @param c
 	 */
@@ -68,7 +68,7 @@ public class Temperature {
 	}
 
 	/**
-	 * Í¬Ê±ÉèÖÃÎÂ¶ÈÖµºÍ¼ÆÁ¿µ¥Î»
+	 * åŒæ—¶è®¾ç½®æ¸©åº¦å€¼å’Œè®¡é‡å•ä½
 	 * 
 	 * @param d
 	 * @param c
@@ -83,7 +83,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ÊÇ·ñÁ½¸öÎÂ¶ÈÏàµÈ
+	 * æ˜¯å¦ä¸¤ä¸ªæ¸©åº¦ç›¸ç­‰
 	 * 
 	 * @param t
 	 * @return
@@ -93,7 +93,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ±È½ÏÒ»¸öÎÂ¶È´óÓÚÁíÒ»¸öÎÂ¶È
+	 * æ¯”è¾ƒä¸€ä¸ªæ¸©åº¦å¤§äºå¦ä¸€ä¸ªæ¸©åº¦
 	 * 
 	 * @param t
 	 * @return
@@ -103,7 +103,7 @@ public class Temperature {
 	}
 
 	/**
-	 * ±È½ÏÒ»¸öÎÂ¶ÈĞ¡ÓÚÁíÒ»¸öÎÂ¶È
+	 * æ¯”è¾ƒä¸€ä¸ªæ¸©åº¦å°äºå¦ä¸€ä¸ªæ¸©åº¦
 	 * 
 	 * @param t
 	 * @return
