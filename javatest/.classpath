@@ -7,7 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.14-bin.jar"/>
-	<classpathentry kind="lib" path="libs/sqljdbc.jar"/>
 	<classpathentry kind="lib" path="libs/epublib-1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="libs/commons-io-2.0.1.jar"/>
 	<classpathentry kind="lib" path="libs/commons-collections-3.2.1.jar"/>
@@ -26,5 +25,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="libs/sqljdbc4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
