@@ -1,14 +1,21 @@
 package springtest;
 
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import springtest.dao.TestDao;
 
 public class contexttest {
+	
+//	@Autowired
+	@Resource(name = "testDAO")
+	private static TestDao dao;
 
 	public static void main(String[] args) {
-		test();
+//		test();
+		System.out.println(dao);
 	}
 	
 	public static void test() {
