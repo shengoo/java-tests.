@@ -20,6 +20,8 @@ public class ConvertFilesEncoding {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	        }
+		}else{
+			System.out.println("File not exist. " + path);
 		}
 	}
 
