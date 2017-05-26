@@ -19,7 +19,7 @@ public class ConnectTest {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testSelect();
+		testInsert();
 	}
 	
 	public static void testSelect(){
@@ -109,7 +109,8 @@ public class ConnectTest {
 			conn= DriverManager.getConnection(url,user,password);
 			stmt = (Statement)conn.createStatement();   
             String sql = "INSERT INTO Customer (name) VALUES ('java')";
-            stmt.execute(sql);
+            int result = stmt.executeUpdate(sql);
+            System.out.println(result);
 			conn.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
