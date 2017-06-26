@@ -36,11 +36,11 @@ class TcpServer1 extends Thread {
 
 			int radius;
 			while ((radius = in.read()) > 0) {
-				System.out.println("server收到:" + radius);
+				System.out.println("server receive:" + radius);
 
 				byte[] b = caculate(radius);
 				out.write(b);
-				System.out.println("server输出:" + new String(b));
+				System.out.println("server send:" + new String(b));
 			}
 			out.close();
 			in.close();
@@ -67,17 +67,17 @@ class TcpClient1 extends Thread {
 			byte[] b = new byte[20];
 
 			out.write(3);
-			System.out.println("client输出:" + 3);
+			System.out.println("client send:" + 3);
 
 			in.read(b);
-			System.out.println("client收到:" + new String(b));
+			System.out.println("client receive:" + new String(b));
 
 			
 			out.write(5);
-			System.out.println("client输出:" + 5);
+			System.out.println("client send:" + 5);
 
 			in.read(b);
-			System.out.println("client收到:" + new String(b));
+			System.out.println("client receive:" + new String(b));
 			
 			
 			out.close();

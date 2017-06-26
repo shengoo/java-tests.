@@ -21,11 +21,11 @@ public class TcpClient {
         OutputStream out = client.getOutputStream();  
           
         out.write(3);  
-        System.out.println("发送："+3);
+        System.out.println("input"+3);
   
         byte[] b = new byte[20];
         in.read(b);
-        System.out.println("收到:" + new String(b));  
+        System.out.println("output:" + new String(b));  
   
         out.close();  
         in.close();  

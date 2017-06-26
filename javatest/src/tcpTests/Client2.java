@@ -1,11 +1,12 @@
 package tcpTests;
-import java.io.BufferedReader;  
-import java.io.DataOutputStream;  
-import java.io.InputStream;  
-import java.io.InputStreamReader;  
-import java.io.OutputStream;  
-import java.net.InetAddress;  
-import java.net.Socket; 
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.Socket;
 
 public class Client2 {
 
@@ -14,37 +15,33 @@ public class Client2 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try  
-	    {  
-	        Socket s=new Socket("192.168.0.254",8080);  
-//	        if(args.length < 2)  
-//	        {  
-//	            System.out.println("Usage:java TcpClient ServerIP ServerPort");  
-//	            return;  
-//	        }  
-	        //½¨Á¢Socket  
-//	        Socket s=new Socket(InetAddress.getByName(args[0]),Integer.parseInt(args[1]));  
-	        InputStream ips=s.getInputStream();  
-	        OutputStream ops=s.getOutputStream();  
-	          
-	        BufferedReader brKey = new BufferedReader(new InputStreamReader(System.in));//¼üÅÌÊäÈë  
-	        DataOutputStream dos = new DataOutputStream(ops);  
-	        BufferedReader brNet = new BufferedReader(new InputStreamReader(ips));  
-	  
-	        while(true)  
-	        {  
-	            String strWord = brKey.readLine();  
-	            dos.writeBytes(strWord + System.getProperty("line.separator"));  
-	            if(strWord.equalsIgnoreCase("quit"))  
-	                break;  
-	            else  
-	                System.out.println(brNet.readLine());  
-	        }  
-	        dos.close();  
-	        brNet.close();  
-	        brKey.close();  
-	        s.close();  
-	    }catch(Exception e){e.printStackTrace();}  
-	    }  
+		try {
+			Socket s = new Socket("127.0.0.1", 10086);
+			InputStream ips = s.getInputStream();
+			OutputStream ops = s.getOutputStream();
+
+
+			BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));// from console
+			DataOutputStream outToServer = new DataOutputStream(ops);
+			BufferedReader inFromServer = new BufferedReader(new InputStreamReader(ips));
+			while (true) {
+				String strWord = inFromUser.readLine();
+				outToServer.writeBytes(strWord + System.getProperty("line.separator"));
+				String responseStr = inFromServer.readLine();
+				if (strWord.equalsIgnoreCase("quit")){
+
+					outToServer.close();
+					inFromServer.close();
+					inFromUser.close();
+					break;
+				}
+				else
+					System.out.println(responseStr);
+			}
+			s.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }
